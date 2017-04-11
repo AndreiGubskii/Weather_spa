@@ -15,7 +15,7 @@ $(document).ready(function(){
 			var weather = '<div class="weather-body">'+
 			'<img class="weather-icon" src="http://openweathermap.org/img/w/'
 			+data.weather[0].icon+'.png" alt="weather-icon"><p class="weather-temp">'
-			+data.main.temp+'C</p><p class="description">'
+			+data.main.temp+'° C</p><p class="description">'
 			+data.weather[0].description+'</p></div>'+
 			'<div class="weather-footer"><p class="humidity">'+"Влажность:"+data.main.humidity+'%</p>'+
 			'<p class="pressure">'+"Давление:"+data.main.pressure+' мм</p><p class="wind">'+"Ветер "+data.wind.speed+'м/с</p>';
@@ -32,8 +32,8 @@ $(document).ready(function(){
 				var date = new Date(obj.dt*1000);
 				var weather = '<div class="weather-week-item"><h3 class="weather-week-title">'+getDayName(date.getDay())+" "+date.getDate()+'</h3>'+
 				'<div class="weather-week-body"><img class="weather-week-icon" src="http://openweathermap.org/img/w/'+obj.weather[0].icon+'.png" alt="weather-icon">'+
-				'<p class="weather-week-temp">'+obj.temp.max+'</p><p class="weather-week-min-temp">'+obj.temp.min+
-				'</p><p class="weather-week-description">'+obj.weather[0].description+'</p></div></div>';
+				'<p class="weather-week-temp">'+obj.temp.max+'° C</p><p class="weather-week-min-temp">'+obj.temp.min+
+				'° C</p><p class="weather-week-description">'+obj.weather[0].description+'</p></div></div>';
 				
 				$(".weather-week").append(weather);
 			});
